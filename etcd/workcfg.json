@@ -1,0 +1,25 @@
+{
+  "initdelay": 2,
+  "workstart": "./etcdstart.sh",
+  "workwatch": 15,
+  "workintvl": 5,
+  "firewall": {
+    "tcpportpmt": "2379,2380",
+    "udpportpmt": "",
+    "icmppermit": "yes"
+  },
+  "etcd": {
+    "name":                            "",
+    "data-dir":                        "",
+    "listen-peer-urls":                "",
+    "listen-client-urls":              "",
+    "initial-cluster-state":           "",
+    "initial-cluster-token":           "",
+    "initial-cluster":                 "",
+    "discovery-srv":                   "",
+    "initial-advertise-peer-urls":     "",
+    "advertise-client-urls":           ""
+  },
+  "etcdkeeper": { "enable": "yes", "srvport": "" }
+}
+
