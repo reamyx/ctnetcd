@@ -13,9 +13,8 @@ docker container run --detach --restart always \
 --device /dev/ppp --device /dev/net/tun \
 --volume /etc/localtime:/etc/localtime:ro \
 --volume /srv/etcdstore:/srv/etcd/etcdstore \
---env "SRVCFG=$SRVCFG" \
 --ip 192.168.15.193 --dns 192.168.15.192 --dns-search local \
-registry.cn-hangzhou.aliyuncs.com/zhixia/imginit:etcd
+--env "SRVCFG=$SRVCFG" ctnetcd
 
 docker container exec -it etcd193 bash
 
@@ -41,9 +40,8 @@ docker container run --detach --restart always \
 --device /dev/ppp --device /dev/net/tun \
 --volume /etc/localtime:/etc/localtime:ro \
 --volume /srv/etcdstore:/srv/etcd/etcdstore \
---env "SRVCFG=$SRVCFG" \
 --ip 192.168.15.194 --dns 192.168.15.192 --dns-search local \
-registry.cn-hangzhou.aliyuncs.com/zhixia/imginit:etcd
+--env "SRVCFG=$SRVCFG" ctnetcd
 
 docker container exec -it etcd194 bash
 
@@ -59,8 +57,7 @@ docker container run --detach --restart always \
 --device /dev/ppp --device /dev/net/tun \
 --volume /etc/localtime:/etc/localtime:ro \
 --volume /srv/etcdstore:/srv/etcd/etcdstore \
---env "SRVCFG=$SRVCFG" \
 --ip 192.168.15.195 --dns 192.168.15.192 --dns-search local \
-registry.cn-hangzhou.aliyuncs.com/zhixia/imginit:etcd
+--env "SRVCFG=$SRVCFG" ctnetcd
 
 docker container exec -it etcd195 bash
