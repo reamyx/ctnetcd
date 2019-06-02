@@ -31,7 +31,7 @@ EXIST=',"initial-cluster-state":"existing"' \
 SRVCFG='{"initdelay":2,"workstart":"./etcdstart.sh",
 "workwatch":15,"workintvl":5,
 "firewall":{"tcpportpmt":"2379,2380","icmppermit":"yes"},
-"etcd":{"name":"etcd194","discovery-srv":"srvrcd.local" $EXIST },
+"etcd":{"name":"etcd194","discovery-srv":"srvrcd.local" },
 "etcdkeeper":{"enable":"yes","srvport":""}}'; \
 docker stop etcd194; docker rm etcd194; \
 docker container run --detach --restart always \
